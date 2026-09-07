@@ -1,0 +1,147 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 5% 0 5%;
+  opacity: 0;
+  animation: slideUpFade 0.7s ease-out forwards;
+}
+
+.hero-text-container {
+  width: 55%;
+}
+
+.hero-logo-container {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.eyebrow-text {
+  color: var(--red);
+  font-weight: 700;
+  font-family: var(--monospace);
+  font-size: 14px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-heading {
+  font-family: var(--san-serif-1);
+  font-size: 90px;
+  font-weight: 900;
+  letter-spacing: -4px;
+  line-height: 0.95;
+}
+
+.hero-description {
+  color: var(--light-white);
+  font-family: var(--san-serif-2);
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.hero-button {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 13px;
+  text-shadow: none !important;
+  font-family: var(--monospace);
+  font-size: 14px;
+  font-weight: 400;
+  color: #f8f8f8;
+  cursor: pointer;
+}
+
+.about-button {
+  background-color: var(--red);
+  margin-right: 15px;
+}
+
+.events-button {
+  background: #ffffff08;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff18;
+}
+
+.connect-highlight {
+  color: var(--red);
+}
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 5% 60px 5%;
+    height: auto;
+    min-height: 100vh;
+    gap: 40px;
+  }
+
+  .hero-text-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+  }
+
+  .hero-heading {
+    font-size: 55px;
+    letter-spacing: -2px;
+  }
+
+  .eyebrow-text {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    width: 95%;
+  }
+
+  .hero-logo {
+    max-width: 250px;
+  }
+
+  .about-button {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 280px;
+    display: block;
+  }
+}
