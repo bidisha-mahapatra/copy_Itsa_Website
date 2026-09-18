@@ -5,10 +5,6 @@ body {
   font:normal 75% Arial, Helvetica, sans-serif;
 }
 
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
 
 /* ---- particles.js container ---- */
 

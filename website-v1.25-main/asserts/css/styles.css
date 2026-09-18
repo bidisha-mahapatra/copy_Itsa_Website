@@ -62,9 +62,6 @@ a {
 nav {
   padding-left: 2.5rem !important;
   padding-right: 2.5rem !important;
-  /* background-color: rgba();
-    backdrop-filter: blur(2px); */
-  /* From https://css.glass */
   background: rgba(0, 0, 0, 0.27);
   /* border-radius: 16px; */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -210,10 +207,6 @@ main {
 #itsa-logo span#x p {
   -webkit-text-stroke: 2px white;
   color: transparent;
-  /* color: transparent; */
-  /* background: -webkit-linear-gradient(var(--red), rgba(0, 0, 255, 0.658));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 section.section {
@@ -233,12 +226,35 @@ section.section {
   font-family: var(--roboto);
   font-weight: 600;
   color: rgb(233 233 233);
+  margin-top: 0px;
 }
+
+
 
 #about hr {
   color: rgb(238, 221, 221);
   background-color: white;
   height: 3px;
+}
+
+.intro-about h2 {
+  padding-top: 50px; 
+  text-align: center;
+  letter-spacing: 10px;
+  font-family: var(--roboto);
+  font-weight: 600;
+  color: rgb(233 233 233);
+  margin-top: 30px;
+}
+
+.intro-team h2 {
+  padding-top: 50px; 
+  text-align: center;
+  letter-spacing: 10px;
+  font-family: var(--roboto);
+  font-weight: 600;
+  color: rgb(233 233 233);
+  margin-top: 30px;
 }
 
 .about-us-info img {
@@ -347,190 +363,368 @@ section.section {
   background-image: linear-gradient(90deg, transparent, var(--red));
 }
 
-/* .carousel {
-    /* overflow-x: hidden; */
-/* padding: 2rem 10vw 3rem 10vw;
-  } */
-/* .carousel-container-rel {
-    position: relative; */
-/* height: fit-content; */
-/* } */
-/* .carousel-container img {
+
+/* =====================================================
+   CONTACT SECTION
+   ===================================================== */
+
+.contact-section {
+    color: #fff;
     width: 100%;
-  } */
-/* .carousel-container .carousel-info h3 {
-    margin-top: 0.8rem;
-    text-align: center;
-  } */
-/* .carousel-container .carousel-info {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+/* =====================================================
+   Contact Page _ first div
+   ===================================================== */
+
+.contact-intro {
     width: 100%;
-    font-weight: 500;
-    font-size: 1.9rem;
-    bottom: 0;
-    transition: linear 0.15s;
-  }
-  .carousel-container li {
-    font-size: 1.3rem;
-  }
-  .carousel-container .carousel-info div {
-    display: none;
-    transition: linear 0.2s;
-  }
-  .carousel-container-rel {
-    overflow: hidden;
-    height: 710px;
-    border-radius: 20px;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.48);
-    border: 1.5px solid rgba(255, 255, 255, 0.85);
-  }
-  @media (min-width: 361px) {
-  #carouselExampleIndicators .carousel-item,.carousel-container-rel {
-    height: 20%;
-    }
-  } */
-*/
-/* .carousel-container-rel:hover > .carousel-info div {
-    display: block;
-  }
-  .carousel-container-rel:hover > .carousel-info {
+    min-height: 500px;
+
     display: flex;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* LEFT SIDE */
+
+.contact-intro-text {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: none;
+    border-radius: 0 35px 35px 0;
+    padding: 60px 50px;
+    box-sizing: border-box;
+}
+
+
+.contact-intro-text h1 {
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+
+.contact-intro-text p {
+    font-size: 22px;
+    line-height: 1.6;
+
+    color: rgb(0, 0, 0);
+
+    margin: 0;
+
+    max-width: 600px;
+}
+
+
+/* RIGHT SIDE - LOGO */
+
+.contact-intro-logo {
+    width: 55%;
+    display: flex;
     justify-content: center;
-    align-items: center; */
-
-/* #events {
-  background-image: linear-gradient(90deg, transparent, var(--red));
-  display: flex;
-  height: 90vh;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-  color: white;
-} */
-
-/* Large Rectangle 3D Icon Cards Layout */
-/* .icon-cards {
-  position: relative;
-  width: 100vw;
-  height: 48vw;
-  max-width: 530px;
-  max-height: 390px;
-  margin: 0 auto;
-  perspective: 1000px;
-  transform-origin: center;
+    align-items: center;
 }
 
-.icon-cards__content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  animation: carousel 15s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
-} */
 
-/* Rectangle event cards */
-/* .icon-cards__item {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 65vw;
-  height: 48vw;
-  max-width: 530px;
-  max-height: 390px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-  border-radius: 18px;
-  overflow: hidden;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  transform-origin: center;
+.contact-logo {
+    width: 280px;
+    height: 280px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    text-align: center;
 }
 
-.icon-cards__item img {
-  width: 100%;
-  height: 76%;
-  object-fit: cover;
-  display: block;
+
+/* =====================================================
+   Contact page - second div
+   ===================================================== */
+
+.contact-leaders {
+    width: 100%;
+    padding: 80px 8%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
-.icon-cards__item h3 {
-  margin: 0;
-  padding: 0.5rem;
-  width: 100%;
-  text-align: center;
-  font-size: 1.18rem;
-  background: rgba(0,0,0,0.35);
-  color: #fff;
-  height: 24%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
-/* 5-card positions for bigger translateZ */
-/* .icon-cards__item:nth-child(1)  { transform: rotateY(0deg) translateZ(36vw); }
-.icon-cards__item:nth-child(2)  { transform: rotateY(72deg) translateZ(36vw); }
-.icon-cards__item:nth-child(3)  { transform: rotateY(144deg) translateZ(36vw); }
-.icon-cards__item:nth-child(4)  { transform: rotateY(216deg) translateZ(36vw); }
-.icon-cards__item:nth-child(5)  { transform: rotateY(288deg) translateZ(36vw); } */
+.contact-leaders h2 {
+    font-size: 40px;
+    font-weight: 500;
 
-/* Animation sequence for 5 cards */
-/* @keyframes carousel {
-  0%, 15%   { transform: translateZ(-36vw) rotateY(0deg); }
-  20%, 35%  { transform: translateZ(-36vw) rotateY(-72deg); }
-  40%, 55%  { transform: translateZ(-36vw) rotateY(-144deg); }
-  60%, 75%  { transform: translateZ(-36vw) rotateY(-216deg); }
-  80%, 95%  { transform: translateZ(-36vw) rotateY(-288deg); }
-  100%      { transform: translateZ(-36vw) rotateY(-360deg); }
-} */
-
-/* Responsive for mobile/tablet */
-/* @media (max-width: 600px) {
-  .icon-cards,
-  .icon-cards__item {
-    width: 96vw;
-    height: 68vw;
-    max-width: 98vw;
-    max-height: 92vw;
-  }
-  .icon-cards__item img {
-    height: 76%;
-  }
-  .icon-cards__item h3 {
-    font-size: 0.93rem;
-    height: 24%;
-  }
-
-  .icon-cards__item:nth-child(1)  { transform: rotateY(0deg) translateZ(44vw);}
-  .icon-cards__item:nth-child(2)  { transform: rotateY(72deg) translateZ(44vw);}
-  .icon-cards__item:nth-child(3)  { transform: rotateY(144deg) translateZ(44vw);}
-  .icon-cards__item:nth-child(4)  { transform: rotateY(216deg) translateZ(44vw);}
-  .icon-cards__item:nth-child(5)  { transform: rotateY(288deg) translateZ(44vw);}
-  @keyframes carousel {
-    0%, 15%   { transform: translateZ(-44vw) rotateY(0deg); }
-    20%, 35%  { transform: translateZ(-44vw) rotateY(-72deg); }
-    40%, 55%  { transform: translateZ(-44vw) rotateY(-144deg); }
-    60%, 75%  { transform: translateZ(-44vw) rotateY(-216deg); }
-    80%, 95%  { transform: translateZ(-44vw) rotateY(-288deg); }
-    100%      { transform: translateZ(-44vw) rotateY(-360deg); }
-  }
-} */
-/* EVENTS section */
-/* #events {
-  background-image: linear-gradient(90deg, transparent, var(--red));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-} */
+    margin-bottom: 15px;
+}
 
 
+.contact-red-line {
+    width: 80px;
+    height: 3px;
+    background-color: red;
+    margin: 0 auto 60px;
+    border-radius: 3px;
+}
+
+
+/* PRESIDENT + VICE PRESIDENT CONTAINER */
+
+.leaders-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+}
+
+.leader {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.919);
+    border-radius: 15px;
+    background: rgba(220, 218, 218, 0.8);
+    box-sizing: border-box;
+}
+
+.leader-image {
+    width: 180px;
+    height: 230px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* LEADER INFORMATION */
+
+.leader-info {
+    padding-left: 25px;
+}
+
+
+.leader-info h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #000000;
+}
+.leader-info h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.leader-info p {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+
+.leader-info i {
+    color: red;
+    margin-right: 6px;
+}
+
+
+/* =====================================================
+   Conact Page - third div : social icons
+   ===================================================== */
+
+.contact-social {
+    width: 100%;
+    padding: 100px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.contact-social h2 {
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+
+.contact-social h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: red;
+    margin-bottom: 30px;
+}
+
+
+.contact-social p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+
+/* SOCIAL ICONS */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.social-icons a {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s ease;
+}
+
+
+.social-icons a:hover {
+    background-color: red;
+    border-color: red;
+    transform: translateY(-5px);
+}
+
+
+/* =====================================================
+   for mobiles design
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* FIRST DIVISION */
+
+    .contact-intro {
+        flex-direction: column;
+
+        padding: 100px 0 60px;
+
+        gap: 50px;
+    }
+
+
+    .contact-intro-text {
+        width: 90%;
+
+        padding: 40px 30px;
+
+        border-left: none;
+
+        border-radius: 0 25px 25px 0;
+
+        align-self: flex-start;
+    }
+
+
+    .contact-intro-text h1 {
+        font-size: 42px;
+    }
+
+
+    .contact-intro-text p {
+        font-size: 18px;
+    }
+
+
+    .contact-intro-logo {
+        width: 100%;
+    }
+
+
+    .logo-placeholder {
+        width: 170px;
+        height: 170px;
+    }
+
+
+    /* SECOND DIVISION */
+
+    .contact-leaders {
+        padding: 60px 20px;
+    }
+
+    .contact-leaders h2 {
+        font-size: 32px;
+    }
+
+    .leaders-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .leader {
+        width: 100%;
+        max-width: 500px;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+
+    .leader-image {
+        width: 160px;
+        height: 210px;
+        margin-bottom: 20px;
+    }
+
+    .leader-info {
+        padding-left: 0;
+    }
+
+    .leader-info h3 {
+        font-size: 23px;
+    }
+
+    .leader-info p {
+        font-size: 17px;
+    }
+
+    /* THIRD DIVISION */
+    .contact-social {
+        padding: 70px 20px;
+    }
+
+    .contact-social h2 {
+        font-size: 27px;
+    }
+
+    .contact-social h3 {
+        font-size: 28px;
+    }
+}
 
 
 #events {
@@ -539,61 +733,42 @@ section.section {
 
 .gallery {
   display: flex;
-
   width: 100%;
-
   max-width: 1400px;
-
   overflow: hidden;
-
   gap: 15px;
   /* space between boxes */
-
   margin-left: auto;
-
   margin-right: auto;
 }
 
 .gallery-item {
   flex: 1 1 0;
-
   overflow: hidden;
-
   cursor: pointer;
-
   transition:
     flex-grow 0.7s ease,
     box-shadow 0.3s ease;
-
   position: relative;
-
   border-radius: 10px;
-
   background: #fff;
   /* box background */
-
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   /* box shadow */
 }
 
 .gallery-item img {
   width: 100%;
-
   height: 350px;
-
   object-fit: cover;
-
   transition: transform 0.7s ease;
-
   display: block;
-
   border-radius: 10px 10px 0 0;
   /* rounded only top corners */
 }
 
 .gallery-item.active {
   flex-grow: 4;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   /* bigger shadow */
 }
@@ -626,60 +801,6 @@ section.section {
 
   border-radius: 5px;
 }
-
-/* Base and Desktop Styles */
-/* .gallery {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  overflow: hidden;
-  gap: 15px;
-  margin: 0 auto;
-}
-
-.gallery-item {
-  flex: 1 1 0;
-  overflow: hidden;
-  cursor: pointer;
-  transition: flex-grow 0.7s ease, box-shadow 0.3s ease;
-  position: relative;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-  display: block;
-  border-radius: 10px 10px 0 0;
-}
-
-.gallery-item.active {
-  flex-grow: 4;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-.gallery-item.active img {
-  transform: scale(1.1);
-}
-
-.caption {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
-  background: rgba(0, 0, 0, 0.4);
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
-} */
 
 /* Mobile-Specific Styles */
 @media (max-width: 800px) {
@@ -1196,3 +1317,140 @@ section.section {
 }
 
 /* Section styling */
+
+
+.sfit-recommendations {
+    min-height: 100vh;
+    padding: 100px 20px 60px;
+    text-align: center;
+    color: white;
+}
+
+.sfit-recommendations h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Small red line */
+.red-line {
+    width: 80px;
+    height: 3px;
+    background-color: red;
+    margin: 0 auto 40px;
+    border-radius: 2px;
+}
+
+
+/* Main transparent box */
+.recommendation-box {
+    width: 70%;
+    max-width: 850px;
+    margin: 0 auto;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+    text-align: left;
+}
+
+
+/* Individual recommendation */
+.recommendation {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.recommendation:last-child {
+    border-bottom: none;
+}
+
+
+/* Dropdown button */
+.dropdown-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+
+    padding: 20px 15px;
+
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.sfit-recommendations h1 {
+    font-family: 'Roboto Slab', serif;
+}
+
+.sfit-recommendations {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Plus symbol */
+.arrow {
+    font-size: 25px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Hidden content */
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.4s ease;
+
+    padding: 0 15px;
+}
+
+.dropdown-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+
+/* When dropdown is opened */
+.recommendation.active .dropdown-content {
+    max-height: 150px;
+}
+
+.recommendation.active .arrow {
+    transform: rotate(45deg);
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .sfit-recommendations h1 {
+        font-size: 28px;
+    }
+
+    .recommendation-box {
+        width: 95%;
+    }
+
+    .dropdown-btn {
+        font-size: 18px;
+    }
+}

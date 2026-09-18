@@ -26,6 +26,12 @@
   height: auto;
 }
 
+.contact-logo {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
 .eyebrow-text {
   color: var(--red);
   font-weight: 700;
