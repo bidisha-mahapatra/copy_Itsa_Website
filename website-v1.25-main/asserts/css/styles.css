@@ -55,8 +55,6 @@ a {
 #home {
   height: 100dvh;
   background-image: linear-gradient(90deg, transparent, var(--red));
-  /* background-image: linear-gradient(90deg, var(--red)20%, rgba(0, 0, 255, 0.626)); */
-  /* background-image: linear-gradient(90deg, rgba(60, 0, 100, 0.7), rgba(0, 0, 165, 0.709), rgba(0, 217, 255, 0.727), rgba(0, 255, 4, 0.661),rgba(255, 255, 0, 0.696), rgba(255, 166, 0, 0.713), var(--red)); */
 }
 
 nav {
@@ -229,25 +227,15 @@ section.section {
   margin-top: 0px;
 }
 
-
-
 #about hr {
   color: rgb(238, 221, 221);
   background-color: white;
   height: 3px;
 }
 
-.intro-about h2 {
-  padding-top: 50px; 
-  text-align: center;
-  letter-spacing: 10px;
-  font-family: var(--roboto);
-  font-weight: 600;
-  color: rgb(233 233 233);
-  margin-top: 30px;
-}
-
-.intro-team h2 {
+.intro-about h2,
+.intro-team h2 
+{
   padding-top: 50px; 
   text-align: center;
   letter-spacing: 10px;
@@ -290,18 +278,10 @@ section.section {
   color: #ff0000;
 }
 
-.about-us-info div.title:hover h3,
-.about-us-info div.title:hover h4 {
-  color: white;
-  text-shadow:
-    0 0 1.5rem white,
-    0 0 3.5rem white,
-    0 0 5rem white,
-    0 0 7rem #ff0000,
-    0 0 4rem #ff0000,
-    0 0 5rem #ff0000,
-    0 0 6rem #ff0000,
-    0 0 7rem #ff0000;
+.about-us-info .title:hover h3,
+.about-us-info .title:hover h4 {
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 20px red;
 }
 
 .about-us-info .about-itsa {
@@ -886,19 +866,7 @@ section.section {
   text-transform: uppercase;
   text-align: center;
   margin-top: 0px;
-}
-
-/* Fade-in and move up animation */
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin-bottom: 45px;
 }
 
 #team .team-division {
@@ -913,12 +881,6 @@ section.section {
   font-family: var(--monospace);
 }
 
-/* #team .team-title::before {
-    content: "--------- ";
-  }
-  #team .team-title::after {
-    content: " ---------";
-  } */
 #team .member-container .member-name {
   font-size: 1.7rem;
   font-weight: 600;
@@ -940,17 +902,11 @@ section.section {
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  box-shadow: 0 0 px #00f0ffcc;
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
 }
 
 #team .team-img-container div {
-  background-color: rgba(66, 66, 66, 0.496);
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.48);
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
-  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.305);
+  border-radius: 15%;
   overflow: hidden;
 }
 
@@ -965,116 +921,6 @@ section.section {
     display: block;
 }
 
-/* coordinators */
-#team .team-division.coordinator .team-img-container div {
-  background-image: linear-gradient(
-    0deg,
-    rgb(252, 248, 30, 0.6),
-    rgba(255, 179, 1, 0.6)
-  );
-}
-
-/* core */
-#team .team-division.core .team-img-container div {
-  background-image: linear-gradient(
-    180deg,
-    rgba(252, 60, 30, 0.6),
-    rgba(255, 162, 1, 0.6)
-  );
-  box-shadow: 0 30px 16px 0 rgba(134, 163, 29, 0.25);
-  /* Adds soft shadow */
-  border-radius: 100%;
-}
-
-.team-img-container div {
-  /* Circular shape and background */
-  background-image: linear-gradient(
-    0deg,
-    rgb(252, 248, 30, 0.6),
-    rgba(255, 179, 1, 0.6)
-  );
-  border-radius: 50%;
-
-  /* Shadow & motion */
-  box-shadow: 50 10px 20px 0 rgba(0, 0, 0, 0.22);
-  animation:
-    float 2.5s ease-in-out infinite,
-    shadow-pulse 1.8s infinite alternate;
-  /* Ensures both animations run together */
-}
-
-/* Floating up and down */
-
-/* Pulsing shadow effect */
-@keyframes shadow-pulse {
-  from {
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
-  }
-
-  to {
-    box-shadow: 0 16px 40px 5px rgba(255, 0, 0, 0.659);
-  }
-
-  /* Shadow color */
-}
-
-*
-
-/* technical */
-#team .team-division.technical .team-img-container div {
-  background-image: linear-gradient(
-    0deg,
-    rgba(255, 0, 162, 0.6),
-    rgba(170, 1, 255, 0.6)
-  );
-}
-
-/* pr */
-#team .team-division.pr .team-img-container div {
-  background-image: linear-gradient(
-    180deg,
-    rgba(18, 140, 228, 0.6),
-    rgba(7, 12, 149, 0.6)
-  );
-}
-
-/* design */
-#team .team-division.design .team-img-container div {
-  background-image: linear-gradient(
-    0deg,
-    rgba(221, 2, 255, 0.6),
-    rgba(117, 10, 232, 0.6)
-  );
-}
-
-/* webmaster */
-#team .team-division.webmaster .team-img-container div {
-  background-image: linear-gradient(
-    135deg,
-    rgba(58, 255, 78, 0.817),
-    rgba(10, 188, 232, 0.848),
-    rgba(0, 0, 255)
-  );
-}
-
-/* logistics */
-#team .team-division.logistic .team-img-container div {
-  background-image: linear-gradient(
-    135deg,
-    rgba(155, 6, 6, 0.664),
-    rgba(255, 68, 0, 0.701)
-  );
-}
-
-/* documentation */
-#team .team-division.documentation .team-img-container div {
-  background-image: linear-gradient(
-    180deg,
-    rgba(249, 20, 188, 0.6),
-    rgba(232, 10, 114, 0.6)
-  );
-}
-
 @media (max-width: 768px) {
   .team-img-container {
     padding: 0 2rem;
@@ -1087,19 +933,16 @@ section.section {
     font: 3rem;
   }
 
-  #team .member-container .member-name {
-    margin-top: 0;
-    font-size: 2rem;
-  }
-
-  #team .member-container .member-post {
+  #team .member-container .member-name,
+  #team .member-container .member-post 
+  {
     margin-top: 0;
     font-size: 2rem;
   }
 
   #team .team-member.col-3 {
     padding: 1rem 0;
-    gap: 15px;
+    gap: 80px;
   }
 }
 
