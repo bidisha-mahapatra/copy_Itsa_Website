@@ -1,0 +1,98 @@
+
+.mosaic-page {
+    width: 100%;
+    padding-top: 80px;
+    background: transparent;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+/* mosaic's introduction */
+
+.mosaic-intro {
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px 20px 50px;
+    text-align: center;
+}
+
+.mosaic-intro h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 55px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.mosaic-red-line {
+    width: 80px;
+    height: 3px;
+    background-color: red;
+    margin: 0 auto 35px;
+    border-radius: 3px;
+}
+
+.mosaic-intro h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif; 
+}
+
+.mosaic-intro p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* =====================================================
+   COMMON GLASS CARD
+   ===================================================== */
+
+.mosaic-card,
+.mosaic-form-card {
+    background: rgba(255, 255, 255, 0.629);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+}
+
+
+/* =====================================================
+   RULES
+   ===================================================== */
+
+.mosaic-rules {
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px 0 70px;
+}
+
+.mosaic-card {
+    padding: 45px 55px;
+    color: #000;
+}
+
+.mosaic-card h2 {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.mosaic-card .mosaic-red-line {
+    margin-bottom: 35px;
+}
+
+.mosaic-card ol {
+    padding-left: 25px;
+    margin: 0;
+}
+
+.mosaic-card li {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+

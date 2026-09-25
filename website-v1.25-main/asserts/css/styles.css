@@ -311,6 +311,7 @@ section.section {
 
 #about .more-info-container p {
   font-size: 1.1rem;
+  font-family: var(--roboto);
 }
 
 #about .more-info img {
