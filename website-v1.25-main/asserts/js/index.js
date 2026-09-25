@@ -14,13 +14,15 @@ window.addEventListener("load", () => {
 
   // Hide the popup after 3 seconds
   setTimeout(() => {
-      popup.style.display = "none";
-  }, 6000); // Adjust time if needed
+    document.querySelector(".popup-window").classList.remove("popup-hidden");
+    document.querySelector(".popup-overlay").classList.remove("popup-hidden");
+    document.body.classList.add("no-scroll");
+  }, 700); // Adjust time if needed
 
   // Redirect when Register Now button is clicked
-  registerBtn.addEventListener("click", () => {
-      window.location.href = "register.html"; // Change to your registration page
-  });
+  // registerBtn.addEventListener("click", () => {
+  //   window.location.href = "register.html"; // Change to your registration page
+  // });
 });
 
 particlesJS("particles-js", {
@@ -133,33 +135,76 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
- const items = document.querySelectorAll('.gallery-item');
-  let currentIndex = 0;
-  const totalItems = items.length;
+const items = document.querySelectorAll(".gallery-item");
+let currentIndex = 0;
+const totalItems = items.length;
 
-  function setActive(index) {
-    items.forEach((item, i) => {
-      if(i === index) {
-        item.classList.add('active');
-      } else {
-        item.classList.remove('active');
-      }
-    });
-  }
+function setActive(index) {
+  items.forEach((item, i) => {
+    if (i === index) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+}
 
-  function next() {
-    currentIndex = (currentIndex + 1) % totalItems;
-    setActive(currentIndex);
-  }
-
-  // Initial activation
+function next() {
+  currentIndex = (currentIndex + 1) % totalItems;
   setActive(currentIndex);
+}
 
-  // Auto slide every 3 seconds
-  let interval = setInterval(next, 3000);
+// Initial activation
+setActive(currentIndex);
 
-  // Pause auto-slide on hover, resume on leave
-  const gallery = document.getElementById('gallery');
-  gallery.addEventListener('mouseenter', () => clearInterval(interval));
-  gallery.addEventListener('mouseleave', () => interval = setInterval(next, 2000));
-  
+// Auto slide every 3 seconds
+let interval = setInterval(next, 3000);
+
+// Pause auto-slide on hover, resume on leave
+const gallery = document.getElementById("gallery");
+// gallery.addEventListener("mouseenter", () => clearInterval(interval));
+// gallery.addEventListener(
+//   "mouseleave",
+//   () => (interval = setInterval(next, 2000)),
+// );
+
+function closePopup() {
+  document.querySelector(".popup-window").classList.add("popup-hidden");
+  document.querySelector(".popup-overlay").classList.add("popup-hidden");
+  document.body.classList.remove("no-scroll");
+}
+
+document
+  .querySelector(".close-popup-button")
+  .addEventListener("click", closePopup);
+
+//this is the function for the coutdown timer in the popup window
+function countDown() {
+  setInterval(function () {
+    const destDate = new Date("October 15,2026, 10:00:00").getTime(); //to update countdown time, adjust this date and time
+    const curDate = new Date().getTime(); //gives current timme in ms
+    const difference = destDate - curDate; //both cur and dest dates are in ms, so diff is also in ms, we need to convert it to days,hr,min,sec later
+
+    const day = Math.floor(difference / (1000 * 60 * 60 * 24)); //we divide the difference which is in ms, we divide it with no.of ms in a day, to get the no.of days
+    const hour = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    ); // %ing the diff with no.of ms in a day, we get out of the days, and are now in the current day's time.
+    //  We divide by no.of ms in an hour to get the exact hr in the day
+    const minute = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)); //we % the diff, by no. of ms in a hour, to get into the current hour
+    //then we divide by no.of ms in a min, to get the exact min
+    const second = Math.floor((difference % (1000 * 60)) / 1000); //again, we % by no. of ms in a min, to get into the current min
+    //then we divide by no.of ms in a sec, to get the exact sec.
+
+    //getting the days, hr, min, sec element from the timer
+    const daysEl = document.getElementById("countdown-days");
+    const hoursEl = document.getElementById("countdown-hours");
+    const minutesEl = document.getElementById("countdown-minutes");
+    const secondsEl = document.getElementById("countdown-seconds");
+
+    daysEl.textContent = String(day).padStart(2, "0"); // String().padStart(2,'0'), makes sure that the numbers in the timer are two digits with leading 0.
+    hoursEl.textContent = String(hour).padStart(2, "0");
+    minutesEl.textContent = String(minute).padStart(2, "0");
+    secondsEl.textContent = String(second).padStart(2, "0");
+  }, 1000);
+}
+countDown();
