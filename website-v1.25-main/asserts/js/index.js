@@ -181,7 +181,7 @@ document
 //this is the function for the coutdown timer in the popup window
 function countDown() {
   setInterval(function () {
-    const destDate = new Date("October 15,2026, 10:00:00").getTime(); //to update countdown time, adjust this date and time
+    const destDate = new Date("October 16,2026, 10:00:00").getTime(); //to update countdown time, adjust this date and time
     const curDate = new Date().getTime(); //gives current timme in ms
     const difference = destDate - curDate; //both cur and dest dates are in ms, so diff is also in ms, we need to convert it to days,hr,min,sec later
 

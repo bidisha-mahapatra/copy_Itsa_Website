@@ -598,7 +598,8 @@ MOBILE
 }
 
 
-.contact-logo {
+.contact-logo,
+.index-intro-logo {
   width: 280px;
   height: 280px;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -609,6 +610,12 @@ MOBILE
   color: rgba(255, 255, 255, 0.6);
   font-size: 18px;
   text-align: center;
+}
+
+.index-intro-logo {
+  border: transparent;
+  width: 320px;
+  height: 320px;
 }
 
 
@@ -811,7 +818,7 @@ MOBILE
     width: 100%;
   }
 
-  
+
   /* SECOND DIVISION */
 
   .contact-leaders {
