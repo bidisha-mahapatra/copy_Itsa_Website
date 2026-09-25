@@ -46,6 +46,18 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.mosaic-collage img {
+    border-radius: 20px;
+    border-style: dotted;
+    border-width: 15px;
+    border-color: #ffffff83;
+    max-width: 60%; 
+    height: auto; 
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 100px;
+}
+
 
 /* =====================================================
    COMMON GLASS CARD
